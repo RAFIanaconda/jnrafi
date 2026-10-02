@@ -44,32 +44,21 @@
 			}
 		
 		<style>
-		/* Education - align tops in two-column grid */
-			#education .features {
-				display: flex;
-				flex-wrap: wrap;
-				align-items: flex-start;
-			}
-
-			#education .features article {
-				display: flex;
-				align-items: flex-start;
-				flex: 0 0 50%;
-				box-sizing: border-box;
-			}
-
-			/* Experience - align tops in two-column grid */
+		/* Experience - logo left, text center, photo right */
 			#experience .features {
-				display: flex;
-				flex-wrap: wrap;
-				align-items: flex-start;
+				display: block;
 			}
 
 			#experience .features article {
 				display: flex;
 				align-items: flex-start;
-				flex: 0 0 50%;
-				box-sizing: border-box;
+				margin-bottom: 2em;
+				padding-bottom: 2em;
+				border-bottom: 1px solid #e0e0e0;
+			}
+
+			#experience .features article:last-child {
+				border-bottom: none;
 			}
 
 			#experience .features article .image.left {
@@ -77,7 +66,6 @@
 				width: 80px;
 				min-width: 80px;
 				margin-right: 1.5em;
-				margin-top: 0;
 			}
 
 			#experience .features article .image.left img {
@@ -93,6 +81,20 @@
 			#experience .features article .content h3 {
 				margin-top: 0;
 				padding-top: 0;
+			}
+
+			#experience .features article .image.right {
+				flex-shrink: 0;
+				width: 200px;
+				min-width: 200px;
+				margin-left: 1.5em;
+			}
+
+			#experience .features article .image.right img {
+				width: 200px;
+				height: 150px;
+				object-fit: cover;
+				border-radius: 6px;
 			}
 		</style>
 	</head>
@@ -381,6 +383,7 @@
 													<li>Performed 80+ structural safety inspections in RMG factories</li>
 												</ul>
 											</div>
+											<span class="image right"><img src="images/exp-rsc.jpg" alt="RSC Work" /></span>
 										</article>
 										<article>
 											<span class="image left"><img src="images/logo-dsc.png" alt="Design Solution Center" style="max-width:100px;" /></span>
@@ -394,6 +397,7 @@
 													<li>Structural design of industrial steel buildings and steel sheds</li>
 												</ul>
 											</div>
+											<span class="image right"><img src="images/exp-dsc.jpg" alt="DSC Work" /></span>
 										</article>
 										<article>
 											<span class="image left"><img src="images/logo-edc.png" alt="Engineering Development Consultants" style="max-width:100px;" /></span>
@@ -407,6 +411,7 @@
 													<li>Structural design of residential buildings in Dhaka and Tangail</li>
 												</ul>
 											</div>
+											<span class="image right"><img src="images/exp-edc.jpg" alt="EDC Work" /></span>
 										</article>
 									</div>
 								</section>
