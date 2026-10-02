@@ -44,35 +44,55 @@
 			}
 		
 		<style>
-			/* Make all publication/research images same height */
-			.posts article .image img {
-				width: 100%;
-				height: 200px;
-				object-fit: cover;
-			}
-
-			/* Make all research interest images same size */
-			.features article .image.left img {
-				width: 120px;
-				height: 120px;
-				object-fit: contain;
-			}
-
-			/* Make education and experience logos same size */
-			.features article .image.left img[src*="logo-"] {
-				width: 100px;
-				height: 100px;
-				object-fit: contain;
-			}
-
-			/* Even out card heights in the posts grid */
-			.posts article {
+		/* Education - align tops in two-column grid */
+			#education .features {
 				display: flex;
-				flex-direction: column;
+				flex-wrap: wrap;
+				align-items: flex-start;
 			}
 
-			.posts article h3 {
-				min-height: 3.5em;
+			#education .features article {
+				display: flex;
+				align-items: flex-start;
+				flex: 0 0 50%;
+				box-sizing: border-box;
+			}
+
+			/* Experience - align tops in two-column grid */
+			#experience .features {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: flex-start;
+			}
+
+			#experience .features article {
+				display: flex;
+				align-items: flex-start;
+				flex: 0 0 50%;
+				box-sizing: border-box;
+			}
+
+			#experience .features article .image.left {
+				flex-shrink: 0;
+				width: 80px;
+				min-width: 80px;
+				margin-right: 1.5em;
+				margin-top: 0;
+			}
+
+			#experience .features article .image.left img {
+				width: 80px;
+				height: 80px;
+				object-fit: contain;
+			}
+
+			#experience .features article .content {
+				flex: 1;
+			}
+
+			#experience .features article .content h3 {
+				margin-top: 0;
+				padding-top: 0;
 			}
 		</style>
 	</head>
