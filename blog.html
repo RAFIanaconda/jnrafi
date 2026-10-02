@@ -10,70 +10,6 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			.blog-post {
-				margin-bottom: 3em;
-				padding-bottom: 2em;
-				border-bottom: 1px solid #e0e0e0;
-			}
-			.blog-post:last-child {
-				border-bottom: none;
-			}
-			.blog-post .meta {
-				color: #888;
-				font-size: 0.9em;
-				margin-bottom: 0.5em;
-			}
-			.blog-post .share-buttons {
-				margin-top: 1em;
-				display: flex;
-				gap: 0.75em;
-				flex-wrap: wrap;
-			}
-			.blog-post .share-buttons a {
-				display: inline-flex;
-				align-items: center;
-				gap: 0.4em;
-				padding: 0.4em 1em;
-				border: 1px solid #ddd;
-				border-radius: 4px;
-				font-size: 0.85em;
-				text-decoration: none;
-				transition: background 0.2s, color 0.2s;
-			}
-			.blog-post .share-buttons a:hover {
-				color: #fff;
-			}
-			.blog-post .share-buttons .share-linkedin:hover {
-				background: #0077B5;
-				border-color: #0077B5;
-			}
-			.blog-post .share-buttons .share-facebook:hover {
-				background: #1877F2;
-				border-color: #1877F2;
-			}
-			.blog-post .share-buttons .share-youtube:hover {
-				background: #FF0000;
-				border-color: #FF0000;
-			}
-			.blog-post .video-container {
-				position: relative;
-				padding-bottom: 56.25%;
-				height: 0;
-				overflow: hidden;
-				margin: 1.5em 0;
-				border-radius: 6px;
-			}
-			.blog-post .video-container iframe {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				border: 0;
-				border-radius: 6px;
-			}
-		</style>
 	</head>
 	<body class="is-preload">
 
@@ -100,77 +36,9 @@
 								<section>
 									<header class="main">
 										<h1>Blog</h1>
-										<p>Recent learnings, insights, and resources on infrastructure engineering and research.</p>
 									</header>
 
-									<!-- Blog Post 1 (Example with Video) -->
-									<div class="blog-post">
-										<p class="meta"><i class="icon solid fa-calendar-alt"></i> &nbsp;October 2, 2026 &nbsp;|&nbsp; <i class="icon solid fa-tag"></i> &nbsp;Asset Management, Water Infrastructure</p>
-										<h2>Understanding Markov Chain Deterioration Models for Pipeline Asset Management</h2>
-										<p>In this post, I discuss how Markov chain models can be used to predict the deterioration of water pipelines over time. These probabilistic models form the backbone of modern asset management frameworks, allowing engineers to forecast condition states and optimize rehabilitation schedules based on life cycle cost analysis.</p>
-
-										<!-- Embedded YouTube Video -->
-										<div class="video-container">
-											<iframe src="https://www.youtube.com/embed/YOUR-VIDEO-ID" allowfullscreen></iframe>
-										</div>
-
-										<!-- Share Buttons -->
-										<div class="share-buttons">
-											<a href="https://www.linkedin.com/sharing/share-offsite/?url=https://jnrafi.github.io/blog.html" target="_blank" class="share-linkedin">
-												<i class="icon brands fa-linkedin"></i> Share on LinkedIn
-											</a>
-											<a href="https://www.facebook.com/sharer/sharer.php?u=https://jnrafi.github.io/blog.html" target="_blank" class="share-facebook">
-												<i class="icon brands fa-facebook-f"></i> Share on Facebook
-											</a>
-											<a href="https://www.youtube.com/@YOUR-CHANNEL" target="_blank" class="share-youtube">
-												<i class="icon brands fa-youtube"></i> Watch on YouTube
-											</a>
-										</div>
-									</div>
-
-									<!-- Blog Post 2 (Example without Video) -->
-									<div class="blog-post">
-										<p class="meta"><i class="icon solid fa-calendar-alt"></i> &nbsp;September 15, 2026 &nbsp;|&nbsp; <i class="icon solid fa-tag"></i> &nbsp;Natural Hazards, Seismic Risk</p>
-										<h2>Key Takeaways from 13NCEE 2026 — Seismic Risk and Water Infrastructure</h2>
-										<p>I had the opportunity to present my research on integrating seismic vulnerability into asset management of water distribution systems at the 13th National Conference on Earthquake Engineering (13NCEE) in Portland, Oregon. Here are some key takeaways from the conference on the latest advancements in seismic risk assessment for civil infrastructure.</p>
-
-										<span class="image main"><img src="images/pic08.jpg" alt="13NCEE Conference" /></span>
-
-										<!-- Share Buttons -->
-										<div class="share-buttons">
-											<a href="https://www.linkedin.com/sharing/share-offsite/?url=https://jnrafi.github.io/blog.html" target="_blank" class="share-linkedin">
-												<i class="icon brands fa-linkedin"></i> Share on LinkedIn
-											</a>
-											<a href="https://www.facebook.com/sharer/sharer.php?u=https://jnrafi.github.io/blog.html" target="_blank" class="share-facebook">
-												<i class="icon brands fa-facebook-f"></i> Share on Facebook
-											</a>
-										</div>
-									</div>
-
-									<!-- Blog Post 3 (Example with Video) -->
-									<div class="blog-post">
-										<p class="meta"><i class="icon solid fa-calendar-alt"></i> &nbsp;August 20, 2026 &nbsp;|&nbsp; <i class="icon solid fa-tag"></i> &nbsp;Machine Learning, Leak Detection</p>
-										<h2>Applying Computer Vision to Satellite Imagery for Water Leak Detection</h2>
-										<p>This post explores how satellite-based remote sensing data combined with deep learning techniques can be used to detect water leaks in distribution networks. I walk through the data acquisition pipeline using Google Earth Engine and the feature engineering process for training a Random Forest classifier.</p>
-
-										<!-- Embedded YouTube Video -->
-										<div class="video-container">
-											<iframe src="https://www.youtube.com/embed/YOUR-VIDEO-ID-2" allowfullscreen></iframe>
-										</div>
-
-										<!-- Share Buttons -->
-										<div class="share-buttons">
-											<a href="https://www.linkedin.com/sharing/share-offsite/?url=https://jnrafi.github.io/blog.html" target="_blank" class="share-linkedin">
-												<i class="icon brands fa-linkedin"></i> Share on LinkedIn
-											</a>
-											<a href="https://www.facebook.com/sharer/sharer.php?u=https://jnrafi.github.io/blog.html" target="_blank" class="share-facebook">
-												<i class="icon brands fa-facebook-f"></i> Share on Facebook
-											</a>
-											<a href="https://www.youtube.com/@YOUR-CHANNEL" target="_blank" class="share-youtube">
-												<i class="icon brands fa-youtube"></i> Watch on YouTube
-											</a>
-										</div>
-									</div>
+									<p>Coming soon — I'll be sharing articles, insights, and resources on infrastructure risk assessment, asset management, and structural engineering. Stay tuned!</p>
 
 								</section>
 
