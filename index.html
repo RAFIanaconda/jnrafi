@@ -11,6 +11,33 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="Personal academic website of Julker Nayen Rafi — Graduate Researcher in Civil Engineering at Georgia Southern University." />
 		<link rel="stylesheet" href="assets/css/main.css" />
+	
+		/* Professional Experience - consistent logo size and alignment */
+			.features article .image.left {
+				display: flex;
+				align-items: flex-start;
+				justify-content: center;
+				width: 100px;
+				min-width: 100px;
+				margin-right: 1.5em;
+			}
+
+			.features article .image.left img[src*="logo-"] {
+				width: 80px;
+				height: 80px;
+				object-fit: contain;
+			}
+
+			.features article {
+				display: flex;
+				align-items: flex-start;
+			}
+
+			.features article .content h3 {
+				margin-top: 0;
+				padding-top: 0;
+			}
+		
 		<style>
 			/* Make all publication/research images same height */
 			.posts article .image img {
