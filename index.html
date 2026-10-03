@@ -42,6 +42,76 @@
 			.posts article h3 {
 				min-height: 3.5em;
 			}
+			/* Notable Moments Slideshow */
+			.slideshow {
+				position: relative;
+				max-width: 100%;
+				margin: 1.5em 0;
+				overflow: hidden;
+				border-radius: 8px;
+			}
+			.slideshow .slides {
+				display: flex;
+				transition: transform 0.5s ease;
+			}
+			.slideshow .slide {
+				min-width: 100%;
+				box-sizing: border-box;
+				text-align: center;
+			}
+			.slideshow .slide img {
+				width: 100%;
+				height: 400px;
+				object-fit: cover;
+				border-radius: 8px;
+			}
+			.slideshow .slide p {
+				font-size: 0.9em;
+				color: #666;
+				font-style: italic;
+				margin-top: 0.5em;
+			}
+			.slideshow-controls {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 1em;
+				margin-top: 1em;
+			}
+			.slideshow-controls .prev-btn,
+			.slideshow-controls .next-btn {
+				background: none;
+				border: 2px solid #ccc;
+				border-radius: 50%;
+				width: 40px;
+				height: 40px;
+				font-size: 1.2em;
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition: border-color 0.2s, color 0.2s;
+			}
+			.slideshow-controls .prev-btn:hover,
+			.slideshow-controls .next-btn:hover {
+				border-color: #4a90d9;
+				color: #4a90d9;
+			}
+			.slideshow-dots {
+				display: flex;
+				gap: 8px;
+			}
+			.slideshow-dots .dot {
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background: #ccc;
+				cursor: pointer;
+				transition: background 0.2s;
+			}
+			.slideshow-dots .dot.active {
+				background: #4a90d9;
+			}
 		</style>
 	</head>
 	
@@ -262,6 +332,91 @@
 									</div>
 								</section>
 
+							<!-- Notable Moments -->
+								<section id="moments">
+									<header class="major">
+										<h2>Notable Moments</h2>
+									</header>
+
+									<div class="slideshow" id="momentSlideshow">
+										<div class="slides">
+
+											<div class="slide">
+												<img src="images/moment-pipelines2026-4.jpg" alt="Paper presentation at ASCE Pipelines 2026" />
+												<p>Paper presentation at ASCE UESI Pipelines Conference 2026, Detroit, Michigan</p>
+											</div>
+
+											<div class="slide">
+												<img src="images/moment-pipelines2026-3.jpg" alt="ASCE Pipelines 2026 Scholarship" />
+												<p>Received ASCE Pipelines 2026 Conference Scholarship, Detroit, Michigan</p>
+											</div>
+
+											<div class="slide">
+												<img src="images/moment-pipelines2026-2.jpg" alt="Downtown Detroit during Pipelines 2026" />
+												<p>Downtown Detroit during ASCE UESI Pipelines Conference 2026</p>
+											</div>
+
+											<div class="slide">
+												<img src="images/moment-13ncee2026.jpg" alt="Paper presentation at 13NCEE 2026" />
+												<p>Paper presentation at EERI 13NCEE Conference 2026, Portland, Oregon</p>
+											</div>
+
+											<div class="slide">
+												<img src="images/moment-13ncee2026-2.png" alt="With colleagues at 13NCEE 2026" />
+												<p>With fellow researchers at EERI 13NCEE Conference 2026, Portland, Oregon</p>
+											</div>
+
+											<div class="slide">
+												<img src="images/moment-13ncee2026-3.jpg" alt="Group photo at 13NCEE 2026" />
+												<p>Group photo at the 13th National Conference on Earthquake Engineering, Portland, Oregon</p>
+											</div>
+
+											<div class="slide">
+												<img src="images/moment-AEPCEC2026.png" alt="Poster presentation at AEP-CEC Symposium" />
+												<p>Poster presentation with Dr. Mazumder at AEP-CEC Student Research Symposium 2026</p>
+											</div>
+
+											<div class="slide">
+												<img src="images/moment-nodig2026.jpg" alt="NASTT No-Dig Show 2026" />
+												<p>NASTT 2026 No-Dig Show, Palm Springs, California</p>
+											</div>
+
+											<div class="slide">
+												<img src="images/moment-nodig2025.jpg" alt="NASTT Southeast Trenchless 2025" />
+												<p>With Dr. Mazumder at NASTT 2025 Southeast Trenchless Conference, Jacksonville, Florida</p>
+											</div>
+
+											<div class="slide">
+												<img src="images/moment-nodig2025-2.jpg" alt="NASTT Southeast Trenchless 2025" />
+												<p>NASTT 2025 Southeast Trenchless Conference, Jacksonville, Florida</p>
+											</div>
+
+											<div class="slide">
+												<img src="images/moment-boomilever2025.png" alt="Boomilever Competition 2025" />
+												<p>Judging the ASCE Boomilever Competition at Georgia Southern University, 2025</p>
+											</div>
+
+											<div class="slide">
+												<img src="images/moment-dam2026.jpeg" alt="Dam visit 2026" />
+												<p>Field visit to a dam site, 2026</p>
+											</div>
+
+											<div class="slide">
+												<img src="images/moment-snow2025.png" alt="Snowfall in Statesboro 2025" />
+												<p>First snowfall experience in Statesboro, Georgia, 2025</p>
+											</div>
+
+										</div>
+									</div>
+
+									<div class="slideshow-controls">
+										<button class="prev-btn" onclick="moveSlide(-1)">&#8592;</button>
+										<div class="slideshow-dots" id="slideDots"></div>
+										<button class="next-btn" onclick="moveSlide(1)">&#8594;</button>
+									</div>
+
+								</section>
+							
 							<!-- Education -->
 								<section id="education">
 									<header class="major">
@@ -524,6 +679,46 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+		
+		<!-- Slideshow Script -->
+			<script>
+				(function() {
+					var currentSlide = 0;
+					var slides = document.querySelectorAll('#momentSlideshow .slide');
+					var totalSlides = slides.length;
+					var dotsContainer = document.getElementById('slideDots');
+					var slidesContainer = document.querySelector('#momentSlideshow .slides');
 
+					// Create dots
+					for (var i = 0; i < totalSlides; i++) {
+						var dot = document.createElement('span');
+						dot.className = 'dot' + (i === 0 ? ' active' : '');
+						dot.setAttribute('data-index', i);
+						dot.addEventListener('click', function() {
+							goToSlide(parseInt(this.getAttribute('data-index')));
+						});
+						dotsContainer.appendChild(dot);
+					}
+
+					function goToSlide(index) {
+						currentSlide = index;
+						slidesContainer.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+						var dots = document.querySelectorAll('.slideshow-dots .dot');
+						dots.forEach(function(d) { d.classList.remove('active'); });
+						dots[currentSlide].classList.add('active');
+					}
+
+					window.moveSlide = function(direction) {
+						var newIndex = currentSlide + direction;
+						if (newIndex < 0) newIndex = totalSlides - 1;
+						if (newIndex >= totalSlides) newIndex = 0;
+						goToSlide(newIndex);
+					};
+
+					// Auto-slide every 5 seconds
+					setInterval(function() { window.moveSlide(1); }, 5000);
+				})();
+			</script>
+		
 	</body>
 </html>
